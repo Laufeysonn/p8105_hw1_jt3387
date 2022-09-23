@@ -16,3 +16,13 @@ Load `penguins` dataset.
 ```{r}
 data("penguins", package = "palmerpenguins")
 ```
+
+Description of the `penguins` dataset:  
+
+- The names of the variables: *``r names(penguins)``*.
+- The values of important variables: *``r names(penguins)[1]``*:``r levels(penguins$species)``; 
+                                     *``r names(penguins)[2]``*:``r levels(penguins$island)``;
+                                     *``r names(penguins)[7]``*:``r levels(penguins$sex)``;
+                                     *``r names(penguins)[8]``*:``r unique(penguins$year)``.
+- The size of the dataset:  ``r nrow(penguins)`` rows and ``r ncol(penguins)`` columns.
+- The mean flipper length: ``r mean(pull(penguins, "flipper_length_mm"), na.rm = TRUE)`` mm.
