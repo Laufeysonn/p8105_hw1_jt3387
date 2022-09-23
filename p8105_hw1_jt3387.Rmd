@@ -40,3 +40,19 @@ Export the scatterplot to project directory.
 ```{r warning=FALSE,message=FALSE}
 ggsave("penguins_scatterplot.png")
 ```
+
+## Problem 2
+
+Create a data frame and output it.
+
+```{r}
+set.seed(777)
+dataframe <-  tibble(
+  vec_numeric <- rnorm(10),
+  vec_logic <- c(vec_numeric > 0),
+  vec_character <- vector("character", length = 10),
+  vec_factor <- factor(c("a", "a", "a", "b", "b", "b", "b", "c", "c", "c"))
+)
+dataframe
+```
+
