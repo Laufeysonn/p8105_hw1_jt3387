@@ -33,3 +33,10 @@ Make a scatterplot of `flipper_length_mm` (y) vs `bill_length_mm` (x)
 ```{r warning=FALSE}
 ggplot(penguins, aes(y = bill_length_mm, x = flipper_length_mm, color = species)) + geom_point()
 ```
+
+Export the scatterplot to project directory.
+
+```{r warning=FALSE,message=FALSE}
+ggsave("penguins_scatterplot.png")
+```
+
