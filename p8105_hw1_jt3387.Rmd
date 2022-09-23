@@ -3,7 +3,7 @@ title: "p8105_hw1_jt3387"
 output: github_document
 ---
 
-```{r message =  FALSE}
+```{r message = FALSE}
 library(tibble)
 library(tidyverse)
 library(ggplot2)
@@ -30,13 +30,13 @@ Description of the `penguins` dataset:
 
 Make a scatterplot of `flipper_length_mm` (y) vs `bill_length_mm` (x).
 
-```{r warning=FALSE}
+```{r warning = FALSE}
 ggplot(penguins, aes(y = bill_length_mm, x = flipper_length_mm, color = species)) + geom_point()
 ```
 
-Export the scatterplot to project directory.
+Export the scatterplot to the project directory.
 
-```{r warning=FALSE,message=FALSE}
+```{r warning = FALSE, message = FALSE}
 ggsave("penguins_scatterplot.png")
 ```
 
@@ -56,17 +56,17 @@ dataframe <-  tibble(
 
 Calculate the mean of each variable.
 
-```{r warning=FALSE}
+```{r warning = FALSE}
 for (i in 1:4) {
  cat(mean(pull(dataframe, names(dataframe)[i])), "\n")
 }
 ```
 
-The result shows that the numeric and logical variables' mean can be calculated, while the character and factor variables' mean can't be.
+The result shows that the numeric and logical variables' means can be calculated, while the character and factor variables' means can't be.
 
 Apply the `as.numeric` function to convert variables from one type to another.
 
-```{r eval=FALSE}
+```{r eval = FALSE}
 for (i in 2:4) {
   cat(as.numeric(pull(dataframe, names(dataframe)[i])), "\n")
 }
@@ -79,4 +79,3 @@ Result interpretation:
 - The logical variable is boolean variable, and an integer value of 1 or 0 is assigned depending on whether the variable value is true or not. Character variable can't be converted to numeric coercively, and it will turn to `NA`. For the factor variable, `as.numeric` will return the underlying numeric (integer) representation, and the variable itself can't be calculated. 
 
 - In conclusion, the result helps explain what happens when we try to take the mean.
-
