@@ -31,7 +31,7 @@ Description of the `penguins` dataset:
 Make a scatterplot of `flipper_length_mm` (y) vs `bill_length_mm` (x).
 
 ```{r warning = FALSE}
-ggplot(penguins, aes(y = bill_length_mm, x = flipper_length_mm, color = species)) + geom_point()
+ggplot(penguins, aes(y = flipper_length_mm, x = bill_length_mm, color = species)) + geom_point()
 ```
 
 Export the scatterplot to the project directory.
