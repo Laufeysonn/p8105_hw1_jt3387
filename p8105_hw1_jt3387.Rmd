@@ -43,7 +43,7 @@ ggsave("penguins_scatterplot.png")
 
 ## Problem 2
 
-Create a data frame and output it.
+Create a data frame.
 
 ```{r}
 set.seed(777)
@@ -53,6 +53,14 @@ dataframe <-  tibble(
   vec_character <- vector("character", length = 10),
   vec_factor <- factor(c("a", "a", "a", "b", "b", "b", "b", "c", "c", "c"))
 )
-dataframe
 ```
 
+Calculate the mean of each variable.
+
+```{r warning=FALSE}
+for (i in 1:4) {
+ cat(mean(pull(dataframe, names(dataframe)[i])), "\n")
+}
+```
+
+The result shows that the numeric and logical variables' mean can be calculated, while the character and factor variables' mean can't be.
