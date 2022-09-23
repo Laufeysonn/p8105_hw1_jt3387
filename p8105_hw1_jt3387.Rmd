@@ -7,6 +7,7 @@ date: "2022-09-22"
 ```{r message =  FALSE}
 library(tibble)
 library(tidyverse)
+library(ggplot2)
 ```
 
 ## Problem 1
@@ -26,3 +27,9 @@ Description of the `penguins` dataset:
                                      *``r names(penguins)[8]``*:``r unique(penguins$year)``.
 - The size of the dataset:  ``r nrow(penguins)`` rows and ``r ncol(penguins)`` columns.
 - The mean flipper length: ``r mean(pull(penguins, "flipper_length_mm"), na.rm = TRUE)`` mm.
+
+Make a scatterplot of `flipper_length_mm` (y) vs `bill_length_mm` (x)
+
+```{r warning=FALSE}
+ggplot(penguins, aes(y = bill_length_mm, x = flipper_length_mm, color = species)) + geom_point()
+```
