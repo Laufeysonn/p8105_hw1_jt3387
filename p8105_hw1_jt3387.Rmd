@@ -50,7 +50,7 @@ set.seed(777)
 dataframe <-  tibble(
   vec_numeric <- rnorm(10),
   vec_logic <- c(vec_numeric > 0),
-  vec_character <- vector("character", length = 10),
+  vec_character <- c("a","b","c","d","e","f","g","h","i","j"),
   vec_factor <- factor(c("a", "a", "a", "b", "b", "b", "b", "c", "c", "c"))
 )
 ```
@@ -64,3 +64,20 @@ for (i in 1:4) {
 ```
 
 The result shows that the numeric and logical variables' mean can be calculated, while the character and factor variables' mean can't be.
+
+Apply the `as.numeric` function to convert variables from one type to another.
+
+```{r eval=FALSE}
+for (i in 2:4) {
+  cat(as.numeric(pull(dataframe, names(dataframe)[i])), "\n")
+}
+```
+
+Result interpretation:
+
+- `TRUE` in the logical variable is converted to 1 and `FALSE` to 0, character variable is converted to a vector consist of `NA`, and factor variable is converted to number 1, 2, 3 which represents three levels.
+
+- The logical variable is boolean variable, and an integer value of 1 or 0 is assigned depending on whether the variable value is true or not. Character variable can't be converted to numeric coercively, and it will turn to `NA`. For the factor variable, `as.numeric` will return the underlying numeric (integer) representation, and the variable itself can't be calculated. 
+
+- In conclusion, the result helps explain what happens when we try to take the mean.
+
