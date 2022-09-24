@@ -64,7 +64,7 @@ for (i in 1:4) {
 
 The result shows that the numeric and logical variables' means can be calculated, while the character and factor variables' means can't be.
 
-Apply the `as.numeric` function to convert variables from one type to another.
+Apply the `as.numeric` function to convert variables from one type to numeric.
 
 ```{r eval = FALSE}
 for (i in 2:4) {
