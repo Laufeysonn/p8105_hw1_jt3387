@@ -78,4 +78,4 @@ Result interpretation:
 
 - The logical variable is boolean variable, and an integer value of 1 or 0 is assigned depending on whether the variable value is true or not. Character variable can't be converted to numeric coercively, and it will turn to `NA`. For the factor variable, `as.numeric` will return the underlying numeric (integer) representation, and the variable itself can't be calculated. 
 
-- In conclusion, the result helps explain what happens when we try to take the mean.
+- In conclusion, the result helps explain what happens when I try to take the mean.
