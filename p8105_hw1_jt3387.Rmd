@@ -66,7 +66,7 @@ The result shows that the numeric and logical variables' means can be calculated
 
 Apply the `as.numeric` function to convert variables from one type to numeric.
 
-```{r eval = FALSE}
+```{r warning = FALSE, eval = FALSE}
 for (i in 2:4) {
   cat(as.numeric(pull(dataframe, names(dataframe)[i])), "\n")
 }
