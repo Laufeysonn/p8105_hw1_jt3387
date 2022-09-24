@@ -28,7 +28,7 @@ Description of the `penguins` dataset:
 - The size of the dataset:  ``r nrow(penguins)`` rows and ``r ncol(penguins)`` columns.
 - The mean flipper length: ``r mean(pull(penguins, "flipper_length_mm"), na.rm = TRUE)`` mm.
 
-Make a scatterplot of `flipper_length_mm` (y) vs `bill_length_mm` (x).
+Make a scatterplot of *`flipper_length_mm`* (y) vs *`bill_length_mm`* (x).
 
 ```{r warning = FALSE}
 ggplot(penguins, aes(y = flipper_length_mm, x = bill_length_mm, color = species)) + geom_point()
